@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: canary-demo
-        image: ghcr.io/hamada-distributed/rollouts-demo:bad-yellow
+        image: ghcr.io/hamada-distributed/rollouts-demo:red
         imagePullPolicy: Always
         ports:
         - name: http
@@ -27,6 +27,11 @@ spec:
             cpu: 5m
   strategy:
     canary:
+      analysis:
+        templateName: success-rate
+        args:
+        - name: ingress
+          values: canary-demo
       canaryService: canary-demo-preview
       steps:
       - setWeight: 20
