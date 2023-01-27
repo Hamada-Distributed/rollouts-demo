@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: canary-demo
-        image: ghcr.io/hamada-distributed/rollouts-demo:blue
+        image: ghcr.io/hamada-distributed/rollouts-demo:green
         imagePullPolicy: Always
         ports:
         - name: http
