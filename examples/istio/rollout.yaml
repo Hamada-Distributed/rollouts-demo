@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: istio-rollout
-        image: ghcr.io/hamada-distributed/rollouts-demo:red
+        image: ghcr.io/hamada-distributed/rollouts-demo:green
         ports:
         - name: http
           containerPort: 8080
